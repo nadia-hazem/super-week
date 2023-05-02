@@ -1,6 +1,18 @@
 <?php
 require 'vendor/autoload.php';
 
+// generate data by calling methods
+/* $faker = Faker\Factory::create();
+
+for ($i = 0; $i < 3; $i++) {
+    echo $faker->name() . "<br>";
+    echo $faker->email() . "<br>";
+}
+for ($i = 0; $i < 3; $i++) {
+    echo $faker->title() . "<br>";
+    echo $faker->text() . "<br>";
+} */
+
 $router = new AltoRouter();
 $router->setBasePath('/super-week');
 

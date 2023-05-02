@@ -4,6 +4,7 @@
 namespace App\Model;
 
 use PDO;
+use App\Utils;
 
 class UserModel
 {
@@ -32,4 +33,31 @@ class UserModel
         $stmt = $this->pdo->query('SELECT * FROM user');
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    
+
+    public function createUser($firstname, $lastname, $email, $password)
+    {
+        $firstname = Utils::valid_data($firstname);
+        $lastname = Utils::valid_data($lastname);
+        $email = Utils::valid_data($email);
+        $password = Utils::valid_data($password);
+
+        $req = $this->pdo->prepare('INSERT INTO user (first_name, last_name, email, password) VALUES (:firstname, :lastname, :email, :password)');
+        $req->execute([
+            'firstname' => $firstname,
+            'lastname' => $lastname,
+            'email' => $email,
+            'password' => password_hash($password, PASSWORD_DEFAULT),
+        ]);
+    }
+
+    public function findOneByEmail($email) 
+    {
+        $req = $this->pdo->prepare('SELECT * FROM user WHERE email = :email');
+        $req->execute([
+            'email' => $email,
+        ]);
+        return $req->fetch(PDO::FETCH_ASSOC);
+    }
+
 }

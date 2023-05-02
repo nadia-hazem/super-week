@@ -62,6 +62,13 @@ $router->addRoutes(array(
             ]);
         };
     }, 'user-create'),
+
+    // register page
+    array('GET', '/register', function () {
+        require 'app/View/register.php'; 
+    }, 'register'),
+
+    
 ));
 
 

@@ -102,6 +102,23 @@ $router->addRoutes(array(   // array(method, path, target, name)
         $authController->logout();
     }, 'logout'),
 
+    // GET book form /////////////////////////////
+    array('GET', '/books/write', function () {
+        $bookController = new \App\Controller\BookController();
+        $bookController->writeBookForm();
+    }, 'get-book'),
+
+    // POST book form ////////////////////////////
+    array('POST', '/books/write', function () {
+        $bookController = new \App\Controller\BookController();
+        $bookController->addBook();
+    }, 'post-book'),
+
+    // GET book list /////////////////////////////
+    array('GET', '/books', function () {
+        $bookController = new \App\Controller\BookController();
+        $bookController->listBooks();
+    }, 'get-books'),
 ));
 
 

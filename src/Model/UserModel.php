@@ -4,8 +4,6 @@
 namespace App\Model;
 
 use PDO;
-use App\Utils;
-
 class UserModel
 {
     private $pdo;

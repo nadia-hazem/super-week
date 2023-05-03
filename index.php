@@ -31,9 +31,8 @@ $router->addRoutes(array(   // array(method, path, target, name)
 
     // User //////////////////////////////////
     array('GET', '/users/[i:id]', function($id) { 
-        echo "<h1>Bienvenue sur la page de l'utilisateur $id</h1>";
         $UserController = new \App\Controller\UserController();
-        $user = $UserController->displayUserData($id);
+        $UserController->displayUserData($id);
     }, 'user'),
 
     // map create user page //////////////////

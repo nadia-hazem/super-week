@@ -9,7 +9,15 @@ $router = new AltoRouter();
 $router->addRoutes(array(   // array(method, path, target, name)
     
     // Home
-    array('GET', '/', function() { echo "<h1>Bienvenue sur l'accueil</h1>";}, 'home'),
+    array('GET', '/', function() { 
+        if (isset($_SESSION['user'])) {
+            $firstname = $_SESSION['user']['first_name'];
+            echo "<h1>Bienvenue sur l'accueil" . $firstname . "</h1>";
+            
+        } else {
+            echo "<h1>Bienvenue sur l'accueil</h1>";
+        }    
+    }, 'home' ),
 
     // Users list
     array('GET', '/users',  function () {
@@ -72,6 +80,17 @@ $router->addRoutes(array(   // array(method, path, target, name)
         $authController = new \App\Controller\AuthController();
         $authController->register();
     }, 'register-post'),
+
+    // login get
+    array('GET', '/login', function () {
+        require 'src/View/login.php'; 
+    }, 'login-get'),
+
+    // login post
+    array('POST', '/login', function () {
+        $authController = new \App\Controller\AuthController();
+        $authController->login();
+    }, 'login-post'),
 ));
 
 

@@ -2,18 +2,16 @@
     require 'vendor/autoload.php';
 
 $router = new AltoRouter();
-$router->setBasePath('/super-week');
-
 /* $router->map( 'GET', '/', function() {
     echo "<h1>Bienvenue sur l'accueil</h1>";
 }, 'home' ); */
 
-$router->addRoutes(array(
-    // array(method, path, target, name)
-
+$router->addRoutes(array(   // array(method, path, target, name)
+    
     // Home
     array('GET', '/', function() { echo "<h1>Bienvenue sur l'accueil</h1>";}, 'home'),
-    // Users
+
+    // Users list
     array('GET', '/users',  function () {
         $userController = new \App\Controller\UserController();
         $users = $userController->list();
@@ -21,12 +19,13 @@ $router->addRoutes(array(
         header('Content-Type: application/json');
         echo json_encode($users);
     }),
-    // User
+
+    // User 
     array('GET', '/users/[i:id]', function($id) { echo "<h1>Bienvenue sur la page de l'utilisateur $id</h1>";}, 'user'),
 
     // map create user page
     array('GET', '/users/create', function () {
-        echo "<h1>Bienvenue sur la page de création d'un utilisateur</h1>";
+        echo "<h1>Bienvenue sur la page de création d'utilisateurs</h1>";
 
         // variables de connexion à la bdd
         $host = 'localhost';
@@ -63,12 +62,16 @@ $router->addRoutes(array(
         };
     }, 'user-create'),
 
-    // register page
+    // register get
     array('GET', '/register', function () {
-        require 'app/View/register.php'; 
-    }, 'register'),
+        require 'src/View/register.php'; 
+    }, 'register-get'),
 
-    
+    // register post
+    array('POST', '/register', function () {
+        $authController = new \App\Controller\AuthController();
+        $authController->register();
+    }, 'register-post'),
 ));
 
 

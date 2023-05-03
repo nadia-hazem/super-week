@@ -1,7 +1,7 @@
 <?php
 // src/Utils.php
 
-namespace App;
+namespace App\Controller;
 
 class Utils
 {

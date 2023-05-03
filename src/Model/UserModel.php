@@ -37,17 +37,12 @@ class UserModel
 
     public function createUser($firstname, $lastname, $email, $password)
     {
-        $firstname = Utils::valid_data($firstname);
-        $lastname = Utils::valid_data($lastname);
-        $email = Utils::valid_data($email);
-        $password = Utils::valid_data($password);
-
         $req = $this->pdo->prepare('INSERT INTO user (first_name, last_name, email, password) VALUES (:firstname, :lastname, :email, :password)');
         $req->execute([
             'firstname' => $firstname,
             'lastname' => $lastname,
             'email' => $email,
-            'password' => password_hash($password, PASSWORD_DEFAULT),
+            'password' => $password,
         ]);
     }
 

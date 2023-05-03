@@ -24,6 +24,16 @@
             <div class="mb-3">
                 <label for="email" class="form-label">Mail</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="text" class="form-control" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Confirm Password</label>
+                <input type="text" class="form-control" id="cpassword" name="cpassword" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </main>
 

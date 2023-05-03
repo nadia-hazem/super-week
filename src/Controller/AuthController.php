@@ -43,7 +43,7 @@ class AuthController {
                 echo '<p class="mx-5">Utilisateur créé avec succès</p>';
                 // Rediriger l'utilisateur vers une autre page
                 header('Location: /');
-                
+
                 exit;
             }
         }
@@ -79,5 +79,13 @@ class AuthController {
             }
 
         }
+    }
+
+    public function logout()
+    {
+        session_start();
+        session_destroy();
+        header('Location: /');
+        exit;
     }
 }

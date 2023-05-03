@@ -1,5 +1,6 @@
 <?php
-    require 'vendor/autoload.php';
+session_start();
+require 'vendor/autoload.php';
 
 $router = new AltoRouter();
 /* $router->map( 'GET', '/', function() {
@@ -12,7 +13,7 @@ $router->addRoutes(array(   // array(method, path, target, name)
     array('GET', '/', function() { 
         if (isset($_SESSION['user'])) {
             $firstname = $_SESSION['user']['first_name'];
-            echo "<h1>Bienvenue sur l'accueil" . $firstname . "</h1>";
+            echo "<h1>Bienvenue sur l'accueil" . ' ' . $firstname . "</h1>";
             
         } else {
             echo "<h1>Bienvenue sur l'accueil</h1>";
@@ -91,6 +92,13 @@ $router->addRoutes(array(   // array(method, path, target, name)
         $authController = new \App\Controller\AuthController();
         $authController->login();
     }, 'login-post'),
+
+    // logout
+    array('GET', '/logout', function () {
+        $authController = new \App\Controller\AuthController();
+        $authController->logout();
+    }, 'logout'),
+
 ));
 
 

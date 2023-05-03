@@ -88,4 +88,5 @@ class AuthController {
         header('Location: /');
         exit;
     }
+
 }

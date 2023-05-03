@@ -54,4 +54,25 @@ class UserModel
         return $req->fetch(PDO::FETCH_ASSOC);
     }
 
+    // retrieve user data with id
+    public function findOneById($id) 
+    {
+        $user = $_SESSION['user']['id'];
+        if (!isset($user)) {
+            throw new \Exception('Vous devez être connecté pour accéder à cette page');
+        }
+
+        $req = $this->pdo->prepare('SELECT * FROM user WHERE id = :id');
+        $req->execute([
+            'id' => $id,
+        ]);
+        $userData = $req->fetch(PDO::FETCH_ASSOC);
+
+        if ($userData) {
+            require_once 'src/View/user.php';
+        } else {
+            throw new \Exception('L\'utilisateur n\'existe pas');
+        }
+    }
+
 }

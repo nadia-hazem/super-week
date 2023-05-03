@@ -9,7 +9,7 @@ $router = new AltoRouter();
 
 $router->addRoutes(array(   // array(method, path, target, name)
     
-    // Home
+    // Home //////////////////////////////
     array('GET', '/', function() { 
         if (isset($_SESSION['user'])) {
             $firstname = $_SESSION['user']['first_name'];
@@ -20,7 +20,7 @@ $router->addRoutes(array(   // array(method, path, target, name)
         }    
     }, 'home' ),
 
-    // Users list
+    // Users list ///////////////////////////
     array('GET', '/users',  function () {
         $userController = new \App\Controller\UserController();
         $users = $userController->list();
@@ -29,10 +29,14 @@ $router->addRoutes(array(   // array(method, path, target, name)
         echo json_encode($users);
     }),
 
-    // User 
-    array('GET', '/users/[i:id]', function($id) { echo "<h1>Bienvenue sur la page de l'utilisateur $id</h1>";}, 'user'),
+    // User //////////////////////////////////
+    array('GET', '/users/[i:id]', function($id) { 
+        echo "<h1>Bienvenue sur la page de l'utilisateur $id</h1>";
+        $UserController = new \App\Controller\UserController();
+        $user = $UserController->displayUserData($id);
+    }, 'user'),
 
-    // map create user page
+    // map create user page //////////////////
     array('GET', '/users/create', function () {
         echo "<h1>Bienvenue sur la page de création d'utilisateurs</h1>";
 
@@ -71,29 +75,29 @@ $router->addRoutes(array(   // array(method, path, target, name)
         };
     }, 'user-create'),
 
-    // register get
+    // register get //////////////////////////
     array('GET', '/register', function () {
         require 'src/View/register.php'; 
     }, 'register-get'),
 
-    // register post
+    // register post /////////////////////////
     array('POST', '/register', function () {
         $authController = new \App\Controller\AuthController();
         $authController->register();
     }, 'register-post'),
 
-    // login get
+    // login get /////////////////////////////
     array('GET', '/login', function () {
         require 'src/View/login.php'; 
     }, 'login-get'),
 
-    // login post
+    // login post ////////////////////////////
     array('POST', '/login', function () {
         $authController = new \App\Controller\AuthController();
         $authController->login();
     }, 'login-post'),
 
-    // logout
+    // logout ////////////////////////////////
     array('GET', '/logout', function () {
         $authController = new \App\Controller\AuthController();
         $authController->logout();

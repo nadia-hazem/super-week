@@ -1,10 +1,9 @@
 <?php
-// BookController.php
+// App/Controller/BookController.php
 
 namespace App\Controller;
 
 use App\Model\BookModel;
-
 class BookController
 {
     public function writeBookForm()
@@ -15,7 +14,7 @@ class BookController
         }
 
         // Display the write book form
-        require_once 'src/View/books/write.php';
+        require_once 'src/View/write.php';
     }
 
     public function addBook()
@@ -61,17 +60,38 @@ class BookController
 
     public function listBooks()
     {
-        // Check if the user is logged in
-        if (!isset($_SESSION['user'])) {
-            throw new \Exception('Vous devez être connecté pour accéder à cette page');
-        }
-
         // Retrieve all books from the database
         $bookModel = new BookModel();
         $books = $bookModel->findAll();
-        $Utils = new Utils();
+        if($books === false) {
+            throw new \Exception('Impossible de récupérer les livres');
+        } else {
+            // Store the books in session
+            $_SESSION['books'] = $books;
+            // Return books data as JSON
+            echo json_encode($books); 
+            /* require_once 'src/View/books.php'; */
+        }
+    }
 
-        // Display the list of books
-        require_once 'src/View/books/books.php';
+    public function displayBookData($id)
+    {
+        // Retrieve the book from the database
+        $bookModel = new BookModel();
+        $book = $bookModel->findOneById($id);
+
+        if (!$book) {
+            throw new \Exception('Impossible de récupérer le livre');
+        } else {
+            // Store the book in session
+            $_SESSION['book'] = $book;
+        }
+        // Return user data as JSON
+        echo json_encode($book);
+        /* require_once 'src/View/books.php'; */
+
+        /* } else {
+            // Render book data using books.php view file
+        }   */      
     }
 }

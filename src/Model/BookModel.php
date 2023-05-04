@@ -33,12 +33,30 @@ class BookModel {
         return $req->fetch(PDO::FETCH_ASSOC);
     }
 
+    public function findOneById($id)
+    {
+        try {
+            $req = $this->pdo->prepare('SELECT * FROM book WHERE id = :id');
+            $req->execute([
+                'id' => $id,
+            ]);
+    
+            if (!$req->rowCount()) {
+                throw new \Exception('Aucun livre trouvé');
+            }
+    
+            $book = $req->fetch(PDO::FETCH_ASSOC);
+    
+            return $book;
+        } catch (\PDOException $e) {
+            echo 'PDOException: ' . $e->getMessage();
+            exit();
+        }
+    }
+
     public function findAll() {
         $stmt = $this->pdo->query('SELECT * FROM book ORDER BY id DESC');
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        /* header('Content-Type: application/json');
-        echo json_encode($stmt); */
     }
 
     public function create($title, $content, $id_user) {

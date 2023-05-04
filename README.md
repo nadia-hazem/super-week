@@ -145,6 +145,8 @@ Once this is done, we will make a **route** to retrieve all the users of our app
 - Launch a method **findAll** which retrieves all the users present in the database and returns them in the form of an associative array to the controller.
 - With your Controller, return your array by encoding it in **JSON** format.
 - And in your index echo your return.
+The result should be like :
+![Json](https://github.com/nadia-hazem/super-week/blob/db3e89d1a71aabb396a1e0bebe5ce32ea5d7bf60/public/img/json.png "Tableau Json")
 
 For each of the steps described above, make commits.
 Make a final commit and push your branch to the repo, make a pull request as before, and pull all changes to your main or master branch.

@@ -46,7 +46,8 @@
 
 ## :dart: About ##
 
-Describe your project
+During this year of training, many notions were seen in the projects. Today it is time to take up this knowledge one by one in order to make sure that you are as comfortable as possible with all these notions.
+This Runtrack breaks down into 9 progressive tasks + a "go further" for more.
 
 ## :sparkles: Features ##
 
@@ -58,11 +59,10 @@ Describe your project
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Composer](https://expo.io/)
+- [Altorouter](https://nodejs.org/en/)
+- [Faker](https://pt-br.reactjs.org/)
+
 
 ## :white_check_mark: Requirements ##
 
@@ -72,7 +72,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/super-week
+$ git clone https://github.com/nadia-hazem/super-week
 
 # Access
 $ cd super-week
@@ -91,7 +91,7 @@ $ yarn start
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">nadia-hazem</a>
 
 &#xa0;
 

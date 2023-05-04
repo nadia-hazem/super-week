@@ -198,12 +198,12 @@ Make a final commit and push your branch to the repo, make a pull request as bef
         * register.php
         * user.php
         * write.php
-.gitignore
-.htaccess
-composer.json
-index.php
-LICENSE
-README.md
+* .gitignore
+* .htaccess
+* composer.json
+* index.php
+* LICENSE
+* README.md
   
 
 ## :memo: License ##

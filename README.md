@@ -9,19 +9,19 @@
 <h1 align="center">Super Week</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/super-week?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/nadia-hazem/super-week?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/super-week?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/nadia-hazem/super-week?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/super-week?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/nadia-hazem/super-week?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/super-week?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/nadia-hazem/super-week?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/super-week?color=56BEB8" /> -->
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/nadia-hazem/super-week?color=56BEB8" /> -->
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/super-week?color=56BEB8" /> -->
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/nadia-hazem/super-week?color=56BEB8" /> -->
 
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/super-week?color=56BEB8" /> -->
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/nadia-hazem/super-week?color=56BEB8" /> -->
 </p>
 
 <!-- Status -->
@@ -39,7 +39,7 @@
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
+  <a href="https://github.com/nadia-hazem" target="_blank">Author</a>
 </p>
 
 <br>
@@ -51,17 +51,18 @@ This Runtrack breaks down into 9 progressive tasks + a "go further" for more.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: MVC architecture;\
+:heavy_check_mark: Altorouter routes;\
+:heavy_check_mark: Fetch, async, await functions;\
+:heavy_check_mark: Bootstrap css;
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [Composer](https://expo.io/)
-- [Altorouter](https://nodejs.org/en/)
-- [Faker](https://pt-br.reactjs.org/)
+- [Composer](https://getcomposer.org/)
+- [Altorouter](https://altorouter.com/)
+- [Faker](https://fakerphp.github.io/)
 
 
 ## :white_check_mark: Requirements ##
@@ -85,6 +86,9 @@ $ yarn start
 
 # The server will initialize in the <http://localhost:3000>
 ```
+
+# 
+
 
 ## :memo: License ##
 

@@ -175,7 +175,7 @@ Make a final commit and push your branch to the repo, make a pull request as bef
 
 ## :memo: License ##
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE) file.
 
 
 Made with :heart: by <a href="https://github.com/nadia-hazem" target="_blank">nadia-hazem</a>

@@ -112,16 +112,16 @@ When all your tests work, commit again to save your progress. Push your work to 
 
 ### JOB_01.5
 Now that we have a router, we can start setting up our database to prepare the rest:
-● A user table:
-   ○ id, int
-   ○ email, varchar(255)
-   ○ first_name, varchar(255)
-   ○ last_name, varchar(255)
-● A book table:
-   ○ id, int
-   ○ title, varchar(255)
-   ○ content, text
-   ○ id_user, int
+* A user table:
+  * id, int
+  * email, varchar(255)
+  * first_name, varchar(255)
+  * last_name, varchar(255)
+* A book table:
+  * id, int
+  * title, varchar(255)
+  * content, text
+  * id_user, int
 
 ### JOB_02.1
 Switch to your main or master branch and pull your latest changes.

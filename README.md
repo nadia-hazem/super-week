@@ -178,26 +178,26 @@ Make a final commit and push your branch to the repo, make a pull request as bef
 
 ## :gem: Structure
 
-*public
-  *img
-  *js
-*src
-  *Controller
-    *AuthController.php
-    *BookController.php
-    *HomeController.php
-    *UserController.php
-    *Utils.php
-  *Model
-    *BookModel.php
-    *UserModel.php
-  *View
-    *books.php
-    *home.php
-    *login.php
-    *register.php
-    *user.php
-    *write.php
+* public
+    * img
+    * js
+* src
+    * Controller
+        * AuthController.php
+        * BookController.php
+        * HomeController.php
+        * UserController.php
+        * Utils.php
+    * Model
+        * BookModel.php
+        * UserModel.php
+    * View
+        * books.php
+        * home.php
+        * login.php
+        * register.php
+        * user.php
+        * write.php
 .gitignore
 .htaccess
 composer.json

@@ -175,6 +175,38 @@ Use the same principle for the connection with two **/login** routes, one with t
 For each step, make commits.
 Make a final commit and push your branch to the repo, make a pull request as before, and pull all changes to your main or master branch.
 
+
+:gem: # Structure
+
+*public
+  *img
+  *js
+*src
+  *Controller
+    *AuthController.php
+    *BookController.php
+    *HomeController.php
+    *UserController.php
+    *Utils
+  *Model
+    *Book
+    *UserModel.php
+  *View
+    *books.php
+    *home.php
+    *login.php
+    *register.php
+    *user.php
+    *write.php
+*vendor
+.gitignore
+.htaccess
+composer.json
+index.php
+LICENSE
+README.md
+  
+
 ## :memo: License ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE) file.

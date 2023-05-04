@@ -93,10 +93,10 @@ This command will install the dependencies specified in the composer.json file, 
 
 ## :hourglass: Jobs
 
-### JOB_00
+### JOB_00 :feet:
 Initialize a new git super-week project and make commits at each past step.
 
-### JOB_01
+### JOB_01 :feet:
 create a new branch
 “feature/router” and switch to it.
 Install a router on your project to have clean URLs and start a project with a good base.
@@ -110,7 +110,7 @@ Once your router is set up, do a few tests to make sure your router is working.
 - “/users/1”: display a page with a top level title that says Welcome to User 1's page where the number varies depending on what is present in the URI.
 When all your tests work, commit again to save your progress. Push your work to github and pull request from origin feature/router to main or master depending on your base branch name.
 
-### JOB_01.5
+### JOB_01.5 :feet:
 Now that we have a router, we can start setting up our database to prepare the rest:
 * A user table:
   * id, int
@@ -123,7 +123,7 @@ Now that we have a router, we can start setting up our database to prepare the r
   * content, text
   * id_user, int
 
-### JOB_02.1
+### JOB_02.1 :feet:
 Switch to your main or master branch and pull your latest changes.
 Create a new **feature/project-design** branch and switch to it.
 We have a database, we have a router, we are ready to develop our application. For this we will start to structure our folders with a **src/** folder at the root of our project. In this folder we will add 3 sub-folders: **Model/**, **Controller/**, **View/**.
@@ -133,7 +133,7 @@ The View folder will contain all the template files that display information to 
 Remember to update your composer.json file to add the “App” namespace to your autoloader.
 Make a commit and push your branch to the repo, make a pull request as before, and pull all changes to your main or master branch.
 
-### JOB_02.2
+### JOB_02.2 :feet:
 Switch to your main or master branch and pull your latest changes.
 Create a new **feature/first-route** branch and switch to it.
 
@@ -151,7 +151,7 @@ The result should be like :
 For each of the steps described above, make commits.
 Make a final commit and push your branch to the repo, make a pull request as before, and pull all changes to your main or master branch.
 
-### JOB_02.3
+### JOB_02.3 :feet:
 Switch to your main or master branch and pull your latest changes.
 Create a new **feature/register** branch and switch to it.
 Why not register our users with a form?
@@ -168,7 +168,7 @@ Make a final commit and push your branch to the repo, make a pull request as bef
 
 Once the database is created, you can start populating your database with fake data in phpmyadmin so you can play around with it a bit.
 
-### JOB_02.4
+### JOB_02.4 :feet:
 Switch to your main or master branch and pull your latest changes.
 Create a new **feature/login** branch and switch to it.
 Use the same principle for the connection with two **/login** routes, one with the **GET** verb and one with the **POST** verb.

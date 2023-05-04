@@ -11,13 +11,8 @@ $router->addRoutes(array(   // array(method, path, target, name)
     
     // Home //////////////////////////////
     array('GET', '/', function() { 
-        if (isset($_SESSION['user'])) {
-            $firstname = $_SESSION['user']['first_name'];
-            echo "<h1>Bienvenue sur l'accueil" . ' ' . $firstname . "</h1>";
-            
-        } else {
-            echo "<h1>Bienvenue sur l'accueil</h1>";
-        }    
+        $homeController = new \App\Controller\HomeController();
+        $homeController->index();
     }, 'home' ),
 
     // Users list ///////////////////////////

@@ -119,6 +119,12 @@ $router->addRoutes(array(   // array(method, path, target, name)
         $bookController = new \App\Controller\BookController();
         $bookController->listBooks();
     }, 'get-books'),
+
+    // GET book by id //////////////////////////
+    array('GET', '/books/[i:id]', function($id) { 
+        $bookController = new \App\Controller\BookController();
+        $bookController->displayBookData($id);
+    }, 'get-book-id'),
 ));
 
 

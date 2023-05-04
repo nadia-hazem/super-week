@@ -1,6 +1,4 @@
 <?php
-// src/View/user.php
-
 // Check if $userData is set
 if (!isset($userData)) {
     throw new \Exception('Aucune donnée utilisateur n\'a été trouvée');
@@ -20,6 +18,7 @@ if (!isset($userData)) {
 </head>
 <body>
     <main class="container">
+        
         <h1>User data</h1>
         <p>Firstname: <?= htmlspecialchars($userData['first_name']) ?></p>
         <p>Lastname: <?= htmlspecialchars($userData['last_name']) ?></p>

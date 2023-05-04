@@ -176,7 +176,7 @@ For each step, make commits.
 Make a final commit and push your branch to the repo, make a pull request as before, and pull all changes to your main or master branch.
 
 
-:gem: # Structure
+## :gem: Structure
 
 *public
   *img
@@ -187,9 +187,9 @@ Make a final commit and push your branch to the repo, make a pull request as bef
     *BookController.php
     *HomeController.php
     *UserController.php
-    *Utils
+    *Utils.php
   *Model
-    *Book
+    *BookModel.php
     *UserModel.php
   *View
     *books.php
@@ -198,7 +198,6 @@ Make a final commit and push your branch to the repo, make a pull request as bef
     *register.php
     *user.php
     *write.php
-*vendor
 .gitignore
 .htaccess
 composer.json

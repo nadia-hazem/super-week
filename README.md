@@ -73,7 +73,7 @@ Clone project: Clone the project from Github using the command
 
 ```bash
 git clone.
-``
+````
 
 ## :checkered_flag: Starting ##
 

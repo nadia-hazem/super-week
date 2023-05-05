@@ -21,8 +21,9 @@ if (isset($_SESSION['error_message'])) {
 
 </head>
 <body>
-    <main class="container">
-        <h1>Add a book</h1>
+    <main class="container my-5 w-75">
+        <h1 class="my-5 fw-light">Add a book</h1>
+        <a href="/" class="btn btn-success mb-5">Back to home</a>
         <form action="" method="post">
             <div class="mb-3">
                 <label for="title" class="form-label">Titre :</label>

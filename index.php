@@ -57,7 +57,7 @@ $router->addRoutes(array(   // array(method, path, target, name)
             echo $firstname . ' ' . $lastname . '<br>';
             // to lowercase
             $mail = strtolower($firstname . '.' . $lastname . '@' . $faker->freeEmailDomain());
-            echo $mail . '<br>';
+            echo $mail . '<br><br>';
             // insert
             $req = $bdd->prepare('INSERT INTO user (first_name, last_name, email, password) VALUES (:firstname, :lastname, :email, :password)');
             $req->execute([

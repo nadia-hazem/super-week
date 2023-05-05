@@ -10,17 +10,25 @@
 
 </head>
 <body>
-    <main class="container">
+    <main class="container my-5 w-75">
+        <h1 class="fw-light my-5">Login</h1>
+        <a href="/" class="btn btn-success mb-5">Back to home</a>
         <form method="post" action="">
-            <div class="mb-3">
-                <label for="email" class="form-label">Mail</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
+            <div class="row">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="text" class="form-control" id="password" name="password" placeholder="Password" required>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="text" class="form-control" id="password" name="password" placeholder="Password" required>
+            <div class="row">
+                <div class="col-6 ">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </main>
     

@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <main class="container">
+    <main class="container my-5 w-75">
         <?php 
         if (isset($books)):
         ?>

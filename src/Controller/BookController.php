@@ -41,7 +41,7 @@ class BookController
         $bookModel = new BookModel();
 
         // Check for an existing book
-        $existing_book = $bookModel->findOneBy($title);
+        $existing_book = $bookModel->findOneBy('title', $title);
         if ($existing_book !== false) {
             // Store the error message in session
             $_SESSION['error_message'] = "Un livre avec le titre '$title' existe déjà dans la base de données.";
@@ -78,7 +78,7 @@ class BookController
     {
         // Retrieve the book from the database
         $bookModel = new BookModel();
-        $book = $bookModel->findOneBy($id);
+        $book = $bookModel->findOneBy('id', $id);
 
         if (!$book) {
             throw new \Exception('Impossible de récupérer le livre');

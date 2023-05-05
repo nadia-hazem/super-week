@@ -27,11 +27,19 @@ abstract class AbstractModel {
     }
 
     // Find one data from a table
-    public function findOneBy($colname)
+    /* public function findOneBy($colname)
     {
         $query = "SELECT * FROM $this->tablename WHERE $colname = :colname";
         $select = $this->pdo->prepare($query);
         $select->execute([':colname' => $colname]);
+        $result = $select->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    } */
+    public function findOneBy($colname, $value)
+    {
+        $query = "SELECT * FROM $this->tablename WHERE $colname = :value";
+        $select = $this->pdo->prepare($query);
+        $select->execute([':value' => $value]);
         $result = $select->fetch(PDO::FETCH_ASSOC);
         return $result;
     }

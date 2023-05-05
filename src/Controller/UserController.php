@@ -19,7 +19,7 @@ class UserController
         $userModel = new UserModel();
     
         // Retrieve user data with id
-        $userData = $userModel->findOneBy($id);
+        $userData = $userModel->findOneBy('id', $id);
     
         if (!$userData) {
             throw new \Exception('L\'utilisateur n\'existe pas');

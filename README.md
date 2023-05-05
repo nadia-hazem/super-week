@@ -92,7 +92,7 @@ This command will install the dependencies specified in the composer.json file, 
 4. Test your project: You can now test the project by running the local web server for your project and verifying that everything is working correctly.
 
 <p align="center">
-	![List encodée Json](https://github.com/nadia-hazem/super-week/blob/dbceb38c3569ef5c3a5483db403f0aed2b10e398/public/img/screenshot.jpg)  
+	<img src="https://github.com/nadia-hazem/super-week/blob/dbceb38c3569ef5c3a5483db403f0aed2b10e398/public/img/screenshot.jpg">  
 </p>
 
 ## :hourglass: Jobs

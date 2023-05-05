@@ -11,29 +11,39 @@
 </head>
 <body>
     
-    <main class="container">
+    <main class="container my-5 w-75">
+        <h1 class="fw-light my-5">Register</h1>
+        <a href="/" class="btn btn-success mx-2">Back to home</a>
         <form method="post" action="">
-            <div class="mb-3">
-                <label for="firstname" class="form-label">Firstname</label>
-                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="John" required>
-            </div>
-            <div class="mb-3">
-                <label for="lastname" class="form-label">Lastname</label>
-                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Doe" required>
+            <div class="row mt-5 ">
+                <div class="col-6 mb-3">
+                    <label for="firstname" class="form-label">Firstname</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="John" required>
+                </div>
+                <div class="col-6 mb-3">
+                    <label for="lastname" class="form-label">Lastname</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Doe" required>
+                </div>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Mail</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="text" class="form-control" id="password" name="password" placeholder="Password" required>
+            <div class="row">
+                <div class="col-6 mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="text" class="form-control" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="col-6 mb-3">
+                    <label for="password" class="form-label">Confirm Password</label>
+                    <input type="text" class="form-control" id="cpassword" name="cpassword" placeholder="Confirm Password" required>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Confirm Password</label>
-                <input type="text" class="form-control" id="cpassword" name="cpassword" placeholder="Confirm Password" required>
+            <div class="row">
+                <div class="col-6 ">
+                    <button type="submit" class="btn btn-primary my-2">Submit</button>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </main>
 

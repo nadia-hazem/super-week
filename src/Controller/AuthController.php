@@ -2,7 +2,6 @@
 // App/Controller/AuthController.php
 
 namespace App\Controller;
-/* use App\Controller\Utils; */
 use App\Model\UserModel;
 use App\Controller\Utils;
 
@@ -31,7 +30,7 @@ class AuthController {
 
             // Vérifier si l'e-mail est déjà utilisé
             $userModel = new UserModel();
-            $user = $userModel->findOneByEmail($email);
+            $user = $userModel->findOneBy($email);
             if ($user) {
                 require_once 'src/View/register.php';
                 echo '<p class="mx-5">Email déjà utilisé</p>';
@@ -62,7 +61,7 @@ class AuthController {
             $password = Utils::valid_data($password);
 
             $request = new UserModel();
-            $user = $request->findOneByEmail($email);
+            $user = $request->findOneBy($email);
             if(!$user) {
                 require_once 'src/View/login.php';
                 echo '<p class="mx-5">Email ou mot de passe incorrect</p>';

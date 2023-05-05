@@ -2,8 +2,8 @@
 // App/Controller/UserController.php
 
 namespace App\Controller;
-
 use App\Model\UserModel;
+
 class UserController
 {
     public function list()
@@ -19,7 +19,7 @@ class UserController
         $userModel = new UserModel();
     
         // Retrieve user data with id
-        $userData = $userModel->findOneById($id);
+        $userData = $userModel->findOneBy($id);
     
         if (!$userData) {
             throw new \Exception('L\'utilisateur n\'existe pas');

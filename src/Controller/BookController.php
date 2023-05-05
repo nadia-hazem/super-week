@@ -2,8 +2,8 @@
 // App/Controller/BookController.php
 
 namespace App\Controller;
-
 use App\Model\BookModel;
+
 class BookController
 {
     public function writeBookForm()
@@ -41,7 +41,7 @@ class BookController
         $bookModel = new BookModel();
 
         // Check for an existing book
-        $existing_book = $bookModel->findOneByTitle($title);
+        $existing_book = $bookModel->findOneBy($title);
         if ($existing_book !== false) {
             // Store the error message in session
             $_SESSION['error_message'] = "Un livre avec le titre '$title' existe déjà dans la base de données.";
@@ -54,7 +54,7 @@ class BookController
         $bookModel->create($title, $content, $id_user);
 
         // Redirect to the list of books
-        header('Location: /books');
+        header('Location: /');
         exit();
     }
 
@@ -78,7 +78,7 @@ class BookController
     {
         // Retrieve the book from the database
         $bookModel = new BookModel();
-        $book = $bookModel->findOneById($id);
+        $book = $bookModel->findOneBy($id);
 
         if (!$book) {
             throw new \Exception('Impossible de récupérer le livre');
@@ -87,11 +87,6 @@ class BookController
             $_SESSION['book'] = $book;
         }
         // Return user data as JSON
-        echo json_encode($book);
-        /* require_once 'src/View/books.php'; */
-
-        /* } else {
-            // Render book data using books.php view file
-        }   */      
+        echo json_encode($book);    
     }
 }

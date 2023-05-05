@@ -126,6 +126,17 @@ const user = await ufetch.json();
 if (user) {
     let table = document.createElement('table')
     table.classList.add('table', 'table-striped', 'table-hover');
+    // create header
+    const headerRow = table.insertRow();
+    const idHeader = headerRow.insertCell();
+    idHeader.textContent = 'ID';
+    const nameHeader = headerRow.insertCell();
+    nameHeader.textContent = 'firstname';   
+    const lastnameHeader = headerRow.insertCell();
+    lastnameHeader.textContent = 'lastname';
+    const emailHeader = headerRow.insertCell();
+    emailHeader.textContent = 'Email';
+
     const row = table.insertRow();
     const idCell = row.insertCell();
     idCell.textContent = user.id;
@@ -160,6 +171,17 @@ searchBookBtn.addEventListener('click', async function(e) {
     if (book) {
         let table = document.createElement('table')
         table.classList.add('table', 'table-striped', 'table-hover');
+        // create header
+        const headerRow = table.insertRow();
+        const idHeader = headerRow.insertCell();
+        idHeader.textContent = 'ID';
+        const nameHeader = headerRow.insertCell();
+        nameHeader.textContent = 'Titre';   
+        const lastnameHeader = headerRow.insertCell();
+        lastnameHeader.textContent = 'Résumé';
+        const emailHeader = headerRow.insertCell();
+        emailHeader.textContent = 'Id Auteur';
+
         const row = table.insertRow();
         const idCell = row.insertCell();
         idCell.textContent = book.id;

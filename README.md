@@ -185,7 +185,7 @@ Use the same principle for the connection with two **/login** routes, one with t
 For each step, make commits.
 Make a final commit and push your branch to the repo, make a pull request as before, and pull all changes to your main or master branch.
 
-### For further ...
+### For further
 You may have noticed that your project has a lot of repetitions in some places. Maybe you could factor your code to avoid this?
 Use inheritance and abstract classes to factorize your code and make it more concise.
 If you wish, you can also use interfaces to make sure you have a little more structure in your classes.

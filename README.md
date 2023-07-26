@@ -95,6 +95,9 @@ This command will install the dependencies specified in the composer.json file, 
 	<img src="https://github.com/nadia-hazem/super-week/blob/dbceb38c3569ef5c3a5483db403f0aed2b10e398/public/img/screenshot.jpg">  
 </p>
 
+&nbsp;
+&nbsp;
+
 ## :hourglass: Jobs
 
 ### JOB_00 :feet:
@@ -182,6 +185,14 @@ Use the same principle for the connection with two **/login** routes, one with t
 For each step, make commits.
 Make a final commit and push your branch to the repo, make a pull request as before, and pull all changes to your main or master branch.
 
+### For further
+You may have noticed that your project has a lot of repetitions in some places. Maybe you could factor your code to avoid this?
+Use inheritance and abstract classes to factorize your code and make it more concise.
+If you wish, you can also use interfaces to make sure you have a little more structure in your classes.
+As for javascript, have you used modern javascript with the use of arrow functions, async and await keywords?
+
+&nbsp;
+&nbsp;
 
 ## :gem: Structure
 

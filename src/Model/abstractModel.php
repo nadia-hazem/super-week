@@ -12,9 +12,9 @@ abstract class AbstractModel {
     {
         // variables de connexion à la bdd
         $host = 'localhost';
-        $dbname = 'superweek';
-        $dbUser = 'root';
-        $dbPass = '';
+        $dbname = 'fqdbhzuh_superweek';
+        $dbUser = 'fqdbhzuh_n0NAq79EJ';
+        $dbPass = 'tNvTEkztxMnhMWtURtBHPvB5EHROYGBf';
 
         try {
             $this->pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $dbUser, $dbPass);
